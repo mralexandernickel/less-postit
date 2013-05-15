@@ -1,0 +1,55 @@
+// 
+//  styles for the postits
+//  
+//  @author Alexander Nickel <mr.alexander.nickel@gmail.com>
+//  @date 2013-05-14T13:40:49Z
+//  @see https://github.com/twitter/bootstrap
+//  @see https://github.com/mralexandernickel/less-transform
+//
+
+// Postit Dimensions
+@borderWidth: 20px;
+@postitWidth: 80px;
+@postitHeight: 40px;
+
+// Postit Colours
+@greenLight: rgb(187,217,134);
+@greenDark: rgb(0,107,52);
+@redDark: rgb(138,17,28);
+
+.postit {
+  background: @white;
+  height: @postitHeight;
+  line-height: @postitHeight;
+  width: @postitWidth;
+  border-style: solid;
+  border-width: 0;
+  // this mixin is included in twitter bootstrap
+  .box-shadow(0 0 5px rgba(0,0,0,0.3));
+  text-align: center;
+  // this mixin is included in less-transform
+  .transform(rotate(5deg));
+  // hide the postits until they are randomly rotated by jquery.less_postit
+  display: none;
+  text-transform: lowercase;
+  
+  &.left {
+    border-left-width: @borderWidth;
+  }
+  
+  &.right {
+    border-right-width: @borderWidth;
+  }
+  
+  &.green-light {
+    border-color: @greenLight;
+  }
+  
+  &.green-dark {
+    border-color: @greenDark;
+  }
+  
+  &.red-dark {
+    border-color: @redDark;
+  }
+}
