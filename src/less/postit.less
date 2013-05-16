@@ -27,8 +27,6 @@
   // this mixin is included in twitter bootstrap
   .box-shadow(0 0 5px rgba(0,0,0,0.3));
   text-align: center;
-  // this mixin is included in less-transform
-  .transform(rotate(5deg));
   // hide the postits until they are randomly rotated by jquery.less_postit
   display: none;
   text-transform: lowercase;
@@ -51,5 +49,101 @@
   
   &.red-dark {
     border-color: @redDark;
+  }
+  
+  &.minus_5 {
+    @media (min-width: 980px) {
+      .transform(rotate(-5deg));
+    }
+    @media (max-width: 979px) {
+      .transform(rotate(85deg));
+    }
+  }
+  
+  &.minus_4 {
+    @media (min-width: 980px) {
+      .transform(rotate(-4deg));
+    }
+    @media (max-width: 979px) {
+      .transform(rotate(86deg));
+    }
+  }
+  
+  &.minus_3 {
+    @media (min-width: 980px) {
+      .transform(rotate(-3deg));
+    }
+    @media (max-width: 979px) {
+      .transform(rotate(87deg));
+    }
+  }
+  
+  &.minus_2 {
+    @media (min-width: 980px) {
+      .transform(rotate(-2deg));
+    }
+    @media (max-width: 979px) {
+      .transform(rotate(88deg));
+    }
+  }
+  
+  &.minus_1 {
+    @media (min-width: 980px) {
+      .transform(rotate(-1deg));
+    }
+    @media (max-width: 979px) {
+      .transform(rotate(89deg));
+    }
+  }
+  
+  &.plusminus {
+    @media (max-width: 979px) {
+      .transform(rotate(90deg));
+    }
+  }
+  
+  &.plus_1 {
+    @media (min-width: 980px) {
+      .transform(rotate(1deg));
+    }
+    @media (max-width: 979px) {
+      .transform(rotate(91deg));
+    }
+  }
+  
+  &.plus_2 {
+    @media (min-width: 980px) {
+      .transform(rotate(2deg));
+    }
+    @media (max-width: 979px) {
+      .transform(rotate(92deg));
+    }
+  }
+  
+  &.plus_3 {
+    @media (min-width: 980px) {
+      .transform(rotate(3deg));
+    }
+    @media (max-width: 979px) {
+      .transform(rotate(93deg));
+    }
+  }
+  
+  &.plus_4 {
+    @media (min-width: 980px) {
+      .transform(rotate(4deg));
+    }
+    @media (max-width: 979px) {
+      .transform(rotate(94deg));
+    }
+  }
+  
+  &.plus_5 {
+    @media (min-width: 980px) {
+      .transform(rotate(5deg));
+    }
+    @media (max-width: 979px) {
+      .transform(rotate(95deg));
+    }
   }
 }

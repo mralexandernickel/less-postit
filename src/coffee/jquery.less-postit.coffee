@@ -3,21 +3,14 @@ $ = jQuery
 config =
   # available colour classes, defined in postit.less
   colours: ["red-dark","green-light","green-dark"]
-  # possible rotations in degrees
-  degrees: [-5..5]
+  # possible rotation classes defined in posit.less
+  degrees: ["minus_5","minus_4","minus_3","minus_2","minus_1","plusminus","plus_1","plus_2","plus_3","plus_4","plus_5"]
 
 methods =
   init: (options) ->
     for postit in $(this)
-      rotation = methods.get_random_array_item [-5..5]
       $(postit).addClass methods.get_random_array_item config.colours
-      $(postit).css
-        "-webkit-transform": "rotate(#{rotation}deg)"
-        "-moz-transform": "rotate(#{rotation}deg)"
-        "-ms-transform": "rotate(#{rotation}deg)"
-        "-o-transform": "rotate(#{rotation}deg)"
-        "transform": "rotate(#{rotation}deg)"
-        "display": "block"
+      $(postit).addClass methods.get_random_array_item config.degrees
   
   get_random_array_item: (array) -> array[Math.floor(Math.random()*array.length)]
 
