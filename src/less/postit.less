@@ -11,6 +11,7 @@
 @borderWidth: 20px;
 @postitWidth: 80px;
 @postitHeight: 40px;
+@postitLargeWidth: 140px;
 
 // Postit Colours
 @greenLight: rgb(187,217,134);
@@ -35,6 +36,10 @@
   
   &.right {
     border-right-width: @borderWidth;
+  }
+  
+  &.large {
+    width: @postitLargeWidth !important;
   }
   
   &.green-light {
