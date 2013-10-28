@@ -9,9 +9,13 @@
 
 // Postit Dimensions
 @borderWidth: 20px;
-@postitWidth: 80px;
-@postitHeight: 40px;
-@postitLargeWidth: 140px;
+
+// Small Postits
+@postitSmallWidth: 80px;
+@postitSmallHeight: 40px;
+// Large Postits
+@postitLargeWidth: 150px;
+@postitLargeHeight: 150px;
 
 // Postit Colours
 @greenLight: rgb(187,217,134);
@@ -20,15 +24,24 @@
 
 .postit {
   background: @white;
-  height: @postitHeight;
-  line-height: @postitHeight;
-  width: @postitWidth;
   border-style: solid;
   border-width: 0;
   // this mixin is included in twitter bootstrap
   .box-shadow(0 0 5px rgba(0,0,0,0.3));
   text-align: center;
   text-transform: lowercase;
+  
+  &.small {
+    height: @postitSmallHeight;
+    line-height: @postitSmallHeight;
+    width: @postitWidth;
+  }
+  
+  &.large {
+    height: @postitLargeHeight;
+    line-height: @postitSmallHeight;
+    width: @postitLargeWidth;
+  }
   
   &.left {
     border-left-width: @borderWidth;
