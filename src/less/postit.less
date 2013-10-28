@@ -9,8 +9,12 @@
 
 // Postit Dimensions
 @borderWidth: 20px;
-@postitWidth: 80px;
-@postitHeight: 40px;
+// small Postits
+@postitSmallWidth: 80px;
+@postitSmallHeight: 40px;
+// Large Postits
+@postitLargeWidth: 150px;
+@postitLargeHeight: 150px;
 
 // Postit Colours
 @greenLight: rgb(187,217,134);
@@ -19,9 +23,6 @@
 
 .postit {
   background: @white;
-  height: @postitHeight;
-  line-height: @postitHeight;
-  width: @postitWidth;
   border-style: solid;
   border-width: 0;
   // this mixin is included in twitter bootstrap
@@ -30,6 +31,18 @@
   // hide the postits until they are randomly rotated by jquery.less_postit
   display: none;
   text-transform: lowercase;
+  
+  &.small {
+    height: @postitSmallHeight;
+    line-height: @postitSmallHeight;
+    width: @postitWidth;
+  }
+  
+  &.large {
+    height: @postitLargeHeight;
+    line-height: @postitSmallHeight;
+    width: @postitLargeWidth;
+  }
   
   &.left {
     border-left-width: @borderWidth;
